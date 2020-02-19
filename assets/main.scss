@@ -1,0 +1,44 @@
+$theme-color: #487eff;
+$theme-color-alt: #48aaff;
+$text-color: #404040;
+$text-color-alt: #7e7e7e;
+$bgcolor: #fff;
+$bgcolor-alt: #fdfdfd;
+
+$main-gradient: linear-gradient(to top right, $theme-color, theme-color-alt);
+
+@mixin clickable() {
+  cursor: pointer;
+  transition: transform 100ms ease-out;
+  &:active {
+    transform: scale(0.9);
+  }
+}
+* {
+  &::-moz-selection {
+    color: white;
+    background-color: $theme-color;
+  }
+
+  &::selection {
+    color: white;
+    background-color: $theme-color;
+  }
+}
+
+.container.dark {
+  $bgcolor: #535353;
+  $bgcolor-alt: #383838;
+  background-color: $bgcolor;
+
+  .numpad-panel {
+    background-color: $bgcolor-alt;
+  }
+}
+
+.material-design-icon {
+  .material-design-icon__svg {
+    width: inherit !important;
+    height: inherit !important;
+  }
+}
